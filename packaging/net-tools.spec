@@ -35,7 +35,7 @@ mkdir -p %{buildroot}/usr/sbin
 mkdir -p %{buildroot}/usr/bin
 mv %{buildroot}/bin/ifconfig %{buildroot}/usr/sbin
 mv %{buildroot}/bin/route %{buildroot}/usr/sbin
-mv %{buildroot}/bin/* %{buildroot}/usr/bin
+mv %{buildroot}/bin/netstat %{buildroot}/usr/bin
 
 
 rm %{buildroot}/sbin/rarp
@@ -55,7 +55,7 @@ rm %{buildroot}/bin/ypdomainname
 /usr/bin/netstat
 /usr/sbin/ifconfig
 /usr/sbin/route
-/usr/sbin/arp
+/sbin/arp
 /sbin/ipmaddr
 /sbin/iptunnel
 /sbin/nameif
