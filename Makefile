@@ -92,7 +92,7 @@ all:		config.h version.h subdirs $(PROGS)
 
 config: 	cleanconfig config.h
 
-install:	all savebin installbin installdata
+install:	all savebin installbin 
 
 update: 	all installbin installdata
 
