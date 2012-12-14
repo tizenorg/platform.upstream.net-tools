@@ -32,8 +32,10 @@ make
 make BASEDIR=%{buildroot} mandir=%{_mandir} install
 
 mkdir -p %{buildroot}/usr/sbin
+mkdir -p %{buildroot}/usr/bin
 mv %{buildroot}/bin/ifconfig %{buildroot}/usr/sbin
 mv %{buildroot}/bin/route %{buildroot}/usr/sbin
+mv %{buildroot}/bin/* %{buildroot}/usr/bin
 
 
 rm %{buildroot}/sbin/rarp
@@ -50,10 +52,10 @@ rm %{buildroot}/bin/ypdomainname
 
 %files 
 %license COPYING
-/bin/netstat
+/usr/bin/netstat
 /usr/sbin/ifconfig
 /usr/sbin/route
-/sbin/arp
+/usr/sbin/arp
 /sbin/ipmaddr
 /sbin/iptunnel
 /sbin/nameif
