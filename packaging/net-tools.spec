@@ -10,6 +10,7 @@ URL: http://sourceforge.net/projects/net-tools/
 Source0: net-tools-%{version}.tar.xz
 Source1: net-tools-config.h
 Source2: net-tools-config.make
+Source1001: 	net-tools.manifest
 
 %description
 The net-tools package contains basic networking tools,
@@ -18,6 +19,7 @@ Most of them are obsolete. For replacement check iproute package.
 
 %prep
 %setup -q 
+cp %{SOURCE1001} .
 
 cp %SOURCE1 ./config.h
 cp %SOURCE2 ./config.make
@@ -51,6 +53,7 @@ rm %{buildroot}/bin/ypdomainname
 
 
 %files 
+%manifest %{name}.manifest
 %license COPYING
 /usr/bin/netstat
 /usr/sbin/ifconfig
