@@ -11,6 +11,7 @@ Source0: net-tools-%{version}.tar.xz
 Source1: net-tools-config.h
 Source2: net-tools-config.make
 Source1001: 	net-tools.manifest
+BuildRequires: libattr-devel
 
 %description
 The net-tools package contains basic networking tools,
