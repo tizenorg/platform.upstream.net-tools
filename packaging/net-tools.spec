@@ -30,6 +30,8 @@ export CFLAGS+=" -fvisibility=hidden"
   
 export CFLAGS="$RPM_OPT_FLAGS $CFLAGS -fpie"
 export LDFLAGS="$LDFLAGS -pie -Wl,-z,relro -Wl,-z,now"
+export CFLAGS+=" -fvisibility=hidden"
+  export CXXFLAGS+=" -fvisibility=hidden"
 
 make
 
