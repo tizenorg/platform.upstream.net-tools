@@ -25,6 +25,9 @@ cp %SOURCE1 ./config.h
 cp %SOURCE2 ./config.make
 
 %build
+export CFLAGS+=" -fvisibility=hidden"
+  export CXXFLAGS+=" -fvisibility=hidden"
+  
 export CFLAGS="$RPM_OPT_FLAGS $CFLAGS -fpie"
 export LDFLAGS="$LDFLAGS -pie -Wl,-z,relro -Wl,-z,now"
 
